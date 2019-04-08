@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Mrs+Sheppards&effect=neon" rel="stylesheet">
+</head>
+<body>
+<div class="main-container">
+    <div class="grid-wrap">
+        <div class="grid">
+            <div class="grid__element grid__element-1">margin: 10px;</div>
+            <div class="grid__element grid__element-2">margin: 10px;</div>
+            <div class="grid__element grid__element-3">margin: 10px;</div>
+            <div class="grid__element font-effect-neon grid__element-4">margin: 10px;</div>
+        </div>
+        <div class="grid__width-info">
+            <div class="grid-width-info">
+                Grid table - {margin: 0 10px;}
+            </div>
+        </div>
+    </div>
+    <div class="main-container__width-info">
+        <div class="main-container-width-info">
+            Max width page - {max-width: 980px;}
+        </div>
+    </div>
+</div>
+<div class="container-js">
+    <div class="form">
+        <div class="form__field form__select">
+            <select name="select" id="" onchange="testSelect()" required>
+                <option value="value-1">One</option>
+                <option value="value-2">Two</option>
+                <option value="value-3">Tree</option>
+            </select>
+        </div>
+        <div class="form__field form__input">
+            <input type="text" required/>
+        </div>
+        <div class="form__field form__checkbox" >
+            <input type="checkbox" id="check" onchange="testCheckBox()" required/>
+            <label for="check">Label</label>
+        </div>
+        <div class="form__field form__btn">
+            <button onclick="testButton()">Button</button>
+        </div>
+    </div>
+</div>
+<script src="/js/main.js"></script>
+</body>
+</html>

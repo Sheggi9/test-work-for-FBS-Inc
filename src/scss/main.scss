@@ -1,0 +1,108 @@
+@import "normalize";
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Mrs Sheppards', cursive;
+}
+
+@mixin width-info {
+  height: 100%;
+  text-align: center;
+  line-height:30px;
+  font-size: 1.4em;
+  user-select: none;
+}
+
+@mixin flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-center-center-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+%grid__element-hover{
+  cursor: pointer;
+  border-radius: 200px;
+}
+
+$margin-container-js: 10px;
+
+.form{
+  @include flex-center-center-column;
+  &__field{
+    margin-top: $margin-container-js;
+  }
+  &__field:last-child{
+    margin-top: $margin-container-js;
+    margin-bottom: $margin-container-js;
+  }
+}
+
+.main-container,.container-js{
+  display: block;
+  max-width: 980px;
+  margin: 0 auto;
+  background: #b8ff68;
+  &__width-info{
+    @include width-info;
+    @include flex-center-center}
+}
+
+.container-js{
+  background: #8aeab0;
+}
+
+
+.grid-wrap{
+  background: #fac876;
+}
+
+.grid{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 10px;
+  &__width-info{
+    @include width-info;
+    @include flex-center-center}
+  &__element{
+    font-size: 1.9em;
+    margin: 10px;
+    min-width: 200px;
+    height: 200px;
+    background: #f29ac2;
+    text-align: center;
+    line-height:200px;
+    flex-grow: 1;
+    border-radius: 20px;
+    user-select: none;
+    transition: border-radius .2s linear;
+    &__width-info{
+      @include flex-center-center}
+  }
+  &__element-1:hover{
+    @extend %grid__element-hover
+  }
+  &__element-2:hover{
+    @extend %grid__element-hover
+  }
+  &__element-3:hover{
+    @extend %grid__element-hover
+  }
+  &__element-4:hover{
+    @extend %grid__element-hover
+  }
+}
+
+@import "resize";
+
+
+

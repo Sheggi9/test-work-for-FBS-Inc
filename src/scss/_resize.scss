@@ -1,0 +1,24 @@
+$size1: calc( 100% / 3 - 20px );
+$size2: calc( 100% / 2 - 20px );
+
+
+@media screen and (max-width: 899px) {
+  .grid__element{
+    background: #ff9a5d;
+    max-width: $size1;
+  }
+}
+
+@media screen and (max-width: 696px) {
+  .grid__element{
+    background: #ff7b53;
+    max-width: $size2;
+  }
+}
+
+@media screen and (max-width: 476px) {
+  .grid__element{
+    background: #ff645d;
+    max-width: 100%;
+  }
+}
